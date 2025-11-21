@@ -13,6 +13,42 @@ body {
     background-color: var(--stone);
     color: var(--charcoal);
 }
+
+/* --- NAV BAR --- */
+.navbar {
+    background-color: var(--navy);
+    color: white;
+    padding: 1.2rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left h2 {
+    margin: 0;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem; /* spacing between links */
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.3rem 0.5rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-right a:hover {
+    color: white;
+    background-color: var(--clay);
+    border-radius: 4px;
+}
 /* --- NAV BAR --- */
 .navbar {
     background-color: var(--navy);
