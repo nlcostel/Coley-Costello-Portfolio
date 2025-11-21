@@ -152,13 +152,12 @@ nav a:hover {
 }
 
 .headshot {
-    width: 260px;          /* consistent, clean size */
-    height: auto;          /* keeps natural proportions */
-    border-radius: 12px;   /* slight rounding — modern & subtle */
-    object-fit: cover;     /* prevents distortion */
-    display: block;
-    margin: 0 auto 20px;   /* centers the image */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    width: 250px;
+    height: auto;
+    border-radius: 0;        /* <-- REMOVE all rounding */
+    object-fit: contain;     /* keep original photo shape */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .about-text {
