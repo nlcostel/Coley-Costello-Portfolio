@@ -57,6 +57,16 @@ nav a:hover {
     color: white !important;
 }
 
+.button,
+.button:visited {
+    color: white !important;
+}
+
+.button:link,
+.button:active {
+    color: white !important;
+}
+
 /* Sections */
 .content-section {
     padding: 2rem 3rem;
