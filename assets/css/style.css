@@ -185,6 +185,7 @@ footer {
 /* --- MOBILE RESPONSIVE STYLES --- */
 @media (max-width: 768px) {
 
+    /* NAVIGATION */
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -208,8 +209,8 @@ footer {
         font-size: 1.2rem;
         padding: 0.4rem 0;
     }
-}
-    /* HERO SECTION ADJUSTS */
+
+    /* HERO SECTION */
     .hero {
         padding: 2rem 1rem;
         text-align: center;
@@ -228,7 +229,7 @@ footer {
         padding: 0.7rem 1rem;
     }
 
-    /* ABOUT PAGE STACKS VERTICALLY */
+    /* ABOUT PAGE */
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -237,7 +238,9 @@ footer {
 
     .headshot {
         width: 180px;
-        border-radius: 50%; /* modern circular look on mobile */
+        height: auto;
+        border-radius: 0; /* <-- FIXED: keep rectangular shape */
+        object-fit: contain;
     }
 
     .about-text {
@@ -248,6 +251,7 @@ footer {
     .content-section {
         padding: 1.5rem 1rem;
     }
+}
 }
 /* Mobile Navigation Fix */
 @media (max-width: 768px) {
