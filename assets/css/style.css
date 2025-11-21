@@ -180,3 +180,64 @@ footer {
     padding: 1rem;
     margin-top: 3rem;
 }
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+
+    /* NAV BAR STACKS CLEANLY */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+    }
+
+    .nav-right a {
+        padding: 0.4rem 0;
+    }
+
+    /* HERO SECTION ADJUSTS */
+    .hero {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+    }
+
+    /* ABOUT PAGE STACKS VERTICALLY */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .headshot {
+        width: 180px;
+        border-radius: 50%; /* modern circular look on mobile */
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    /* GENERAL PAGE PADDING */
+    .content-section {
+        padding: 1.5rem 1rem;
+    }
+}
