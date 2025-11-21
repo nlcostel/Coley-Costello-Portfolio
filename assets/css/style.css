@@ -1,23 +1,22 @@
-/* Earth-tone color palette */
 :root {
-    --sand: #E8DCC2;
-    --clay: #C57B57;
-    --sage: #A3B18A;
-    --forest: #344E41;
-    --charcoal: #333333;
+    --navy: #1F2C34;
+    --clay: #C07A55;
+    --sage: #AAB99F;
+    --stone: #E6E2DA;
+    --charcoal: #2E2F2F;
 }
 
 /* Global */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--sand);
+    background-color: var(--stone);
     color: var(--charcoal);
 }
 
 /* Navigation */
 nav {
-    background-color: var(--forest);
+    background-color: var(--navy);
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -25,23 +24,15 @@ nav {
     align-items: center;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.2rem;
-}
-
 nav a {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 nav a:hover {
     color: var(--sage);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
     background-color: var(--sage);
     padding: 4rem 2rem;
@@ -49,47 +40,27 @@ nav a:hover {
 }
 
 .hero h1 {
-    color: var(--forest);
-    font-size: 2.2rem;
+    color: var(--navy);
 }
 
 .button {
     background-color: var(--clay);
-    padding: 0.8rem 1.5rem;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
 }
 
 .button:hover {
-    background-color: var(--forest);
+    background-color: var(--navy);
 }
 
-/* Content Sections */
+/* Sections */
 .content-section {
     padding: 2rem 3rem;
 }
 
-/* Projects */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.project-card {
-    background-color: white;
-    border-left: 6px solid var(--clay);
-    padding: 1rem;
-    border-radius: 8px;
-}
-
 /* Footer */
 footer {
+    background-color: var(--navy);
+    color: white;
     text-align: center;
     padding: 1rem;
-    background-color: var(--forest);
-    color: white;
     margin-top: 3rem;
 }
