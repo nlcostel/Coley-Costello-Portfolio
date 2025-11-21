@@ -44,11 +44,17 @@ nav a:hover {
 }
 
 .button {
-    background-color: var(--clay);
+   background-color: var(--clay) !important;
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
 .button:hover {
-    background-color: var(--navy);
+   background-color: var(--navy) !important;
+    color: white !important;
 }
 
 /* Sections */
