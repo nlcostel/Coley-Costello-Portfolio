@@ -142,6 +142,36 @@ nav a:hover {
     padding: 2rem 3rem;
 }
 
+/* --- ABOUT PAGE LAYOUT --- */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.headshot {
+    width: 260px;
+    height: auto;
+    border-radius: 12px; /* clean modern shape */
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
 /* Footer */
 footer {
     background-color: var(--navy);
