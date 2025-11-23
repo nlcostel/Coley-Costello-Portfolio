@@ -117,8 +117,8 @@ body {
 }
 
 .controller-icon {
-    width: 35px;       /* smaller and balanced */
-    height: 35px;
+    width: 45px;       /* smaller and balanced */
+    height: 45px;
     object-fit: contain;
     opacity: 0.95;
 }
