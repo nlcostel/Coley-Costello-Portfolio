@@ -1,3 +1,4 @@
+/* ---------- COLOR PALETTE ---------- */
 :root {
     --navy: #1F2C34;
     --clay: #C07A55;
@@ -6,7 +7,7 @@
     --charcoal: #2E2F2F;
 }
 
-/* Global */
+/* ---------- GLOBAL ---------- */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -14,7 +15,7 @@ body {
     color: var(--charcoal);
 }
 
-/* NAVIGATION */
+/* ---------- NAVIGATION ---------- */
 .navbar {
     background-color: var(--navy);
     color: white;
@@ -24,102 +25,81 @@ body {
     align-items: center;
 }
 
-.nav-right {
-    display: flex;
-    gap: 2rem;
-}
-
 .nav-right a {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    margin-left: 1.5rem;
 }
 
-.nav-right a.active,
-.nav-right a:hover {
-    background-color: var(--clay);
-    padding: 0.3rem 0.5rem;
-    border-radius: 4px;
+.nav-right a.active {
+    border-bottom: 2px solid var(--clay);
 }
 
-/* GENERAL CONTENT */
+/* ---------- PAGE HEADER ---------- */
 .content-section {
     padding: 2rem 3rem;
 }
 
 .projects-title {
-    font-size: 2.4rem;
     text-align: center;
+    font-size: 2.3rem;
     color: var(--navy);
+    margin-bottom: 0.5rem;
 }
 
 .projects-intro {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto 2rem;
-    font-size: 1.15rem;
-    line-height: 1.6;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
 }
 
-/* PROJECT GRID */
+/* ---------- PROJECT GRID ---------- */
 .projects-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    justify-items: center;
 }
 
-/* PROJECT CARD */
+/* Ensures 4th card starts on row 2, column 1 */
+.start-second-row {
+    grid-column: 1 / span 1;
+}
+
+/* ---------- PROJECT CARDS ---------- */
 .project-card {
-    background-color: white;
-    width: 320px;
-    padding: 1.8rem;
+    background: white;
+    padding: 2rem;
     border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* HEAD ICONS */
-.project-logo-row {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.project-logo-small {
-    width: 45px;
-    height: auto;
-}
-
-/* CARD TEXT */
 .project-card h2 {
     color: var(--navy);
-    margin-bottom: 0.8rem;
-}
-
-.project-card p {
-    color: #444;
-    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
 .project-card ul {
     padding-left: 1.2rem;
 }
 
-/* BUTTONS */
+/* ---------- BUTTONS ---------- */
 .button {
     background-color: var(--clay);
     color: white !important;
-    padding: 0.7rem 1.4rem;
-    border-radius: 6px;
+    padding: 0.8rem 1.3rem;
     text-decoration: none;
+    border-radius: 6px;
     font-weight: bold;
     display: inline-block;
     margin-top: 1rem;
@@ -129,8 +109,36 @@ body {
     background-color: var(--navy);
 }
 
-.project-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+/* ---------- PROJECT ICONS ---------- */
+.project-icons {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 8px;
+}
+
+.project-logo.small {
+    width: 50px;
+    height: 50px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .start-second-row {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
