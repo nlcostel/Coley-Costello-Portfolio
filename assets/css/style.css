@@ -253,4 +253,12 @@ footer {
     .content-section {
         padding: 1.5rem 1rem;
     }
+
+    .project-card .project-btn {
+    margin-top: 0.5rem;
+}
+
+.project-card a.button + a.button {
+    margin-left: 0.5rem;
+}
 }
