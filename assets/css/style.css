@@ -108,3 +108,19 @@ a {
     padding: 1.8rem;
     border-radius: 18px;
     box-shadow: 0 6p
+
+/* --- PROJECT CARD IMAGES --- */
+
+.project-card img.project-logo {
+    width: 120px;         /* clean consistent size */
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;  /* centers it */
+}
+
+.project-card img.small-icon {
+    width: 28px;
+    height: auto;
+    margin-bottom: -4px;  /* aligns with title */
+    margin-right: 6px;
+}
