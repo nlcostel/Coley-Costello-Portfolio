@@ -1,3 +1,6 @@
+/* -------------------------------------------------------------------
+    COLOR THEME
+------------------------------------------------------------------- */
 :root {
     --navy: #1F2C34;
     --clay: #C07A55;
@@ -6,7 +9,9 @@
     --charcoal: #2E2F2F;
 }
 
-/* GLOBAL */
+/* -------------------------------------------------------------------
+    GLOBAL
+------------------------------------------------------------------- */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -14,21 +19,20 @@ body {
     color: var(--charcoal);
 }
 
-/* --- NAV BAR --- */
+a {
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------
+    NAV BAR
+------------------------------------------------------------------- */
 .navbar {
     background-color: var(--navy);
     color: white;
     padding: 1.2rem 2rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav-left {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: white;
 }
 
 .nav-right {
@@ -38,227 +42,69 @@ body {
 
 .nav-right a {
     color: white;
-    text-decoration: none;
     font-weight: 600;
     padding: 0.3rem 0.5rem;
-    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.nav-right a:hover {
-    color: white;
+.nav-right a:hover,
+.nav-right a.active {
     background-color: var(--clay);
     border-radius: 4px;
+    color: white;
 }
 
-/* HERO */
-.hero {
-    background-color: var(--sage);
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.hero h1 {
-    color: var(--navy);
-}
-
+/* -------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------- */
 .button {
-    background-color: var(--clay) !important;
+    background-color: var(--clay);
     color: white !important;
     padding: 0.8rem 1.5rem;
-    text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    display: inline-block;
 }
 
 .button:hover {
-    background-color: var(--navy) !important;
-    color: white !important;
+    background-color: var(--navy);
 }
 
-/* CONTENT SECTIONS */
+/* -------------------------------------------------------------------
+    PAGE SECTIONS
+------------------------------------------------------------------- */
 .content-section {
     padding: 2rem 3rem;
 }
 
-/* --- ABOUT PAGE --- */
-.about-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 2.5rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
+/* -------------------------------------------------------------------
+    PROJECTS PAGE
+------------------------------------------------------------------- */
 
-.headshot {
-    width: 250px;
-    height: auto;
-    border-radius: 0;
-    object-fit: contain;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h1 {
-    color: var(--navy);
-    margin-bottom: 1rem;
-}
-
-.about-text p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-/* FOOTER */
-footer {
-    background-color: var(--navy);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
-}
-
-/* --- PROJECTS PAGE --- */
 .projects-title {
-    font-size: 2.2rem;
-    color: var(--navy);
     text-align: center;
+    color: var(--navy);
+    font-size: 2.3rem;
     margin-bottom: 0.5rem;
 }
 
 .projects-intro {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 2.5rem;
     font-size: 1.1rem;
-    line-height: 1.6;
     color: #333;
 }
 
+/* --- 3 cards per row --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
 }
 
+/* PROJECT CARD */
 .project-card {
     background-color: white;
     padding: 1.8rem;
     border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.project-card h2,
-.project-card h3 {
-    color: var(--navy);
-    margin-bottom: 0.8rem;
-    font-size: 1.4rem;
-}
-
-.project-card p {
-    color: #444;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-}
-
-.project-btn {
-    background-color: var(--clay);
-    color: white !important;
-    display: inline-block;
-    text-align: center;
-}
-
-.project-btn:hover {
-    background-color: var(--navy);
-}
-
-/* Skill Pills inside project card */
-.project-skills li {
-    background: #eef2f5;
-    padding: 6px 12px;
-    border-radius: 6px;
-    display: inline-block;
-    margin: 4px 6px 4px 0;
-    font-size: 0.9rem;
-}
-
-/* Project card button layout */
-.project-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-/* --- MOBILE RESPONSIVE STYLES --- */
-@media (max-width: 768px) {
-
-    /* NAV */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-        gap: 0.8rem;
-    }
-
-    .nav-right {
-        flex-direction: column;
-        width: 100%;
-        gap: 0.6rem;
-    }
-
-    .nav-right a {
-        font-size: 1.2rem;
-        padding: 0.4rem 0;
-    }
-
-    /* HERO */
-    .hero {
-        padding: 2rem 1rem;
-    }
-
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-
-    /* ABOUT PAGE */
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .headshot {
-        width: 180px;
-    }
-
-    /* PROJECTS PAGE */
-    .projects-title {
-        font-size: 1.8rem;
-    }
-
-    .projects-intro {
-        font-size: 1rem;
-    }
-
-    .content-section {
-        padding: 1.5rem 1rem;
-    }
-
-    .project-card .project-btn {
-    margin-top: 0.5rem;
-}
-
-.project-card a.button + a.button {
-    margin-left: 0.5rem;
-}
-}
+    box-shadow: 0 6p
