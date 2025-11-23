@@ -1,6 +1,3 @@
-/* -------------------------------------------------------------------
-    COLOR THEME
-------------------------------------------------------------------- */
 :root {
     --navy: #1F2C34;
     --clay: #C07A55;
@@ -9,9 +6,7 @@
     --charcoal: #2E2F2F;
 }
 
-/* -------------------------------------------------------------------
-    GLOBAL
-------------------------------------------------------------------- */
+/* Global */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -19,13 +14,7 @@ body {
     color: var(--charcoal);
 }
 
-a {
-    text-decoration: none;
-}
-
-/* -------------------------------------------------------------------
-    NAV BAR
-------------------------------------------------------------------- */
+/* NAVIGATION */
 .navbar {
     background-color: var(--navy);
     color: white;
@@ -42,85 +31,106 @@ a {
 
 .nav-right a {
     color: white;
+    text-decoration: none;
     font-weight: 600;
-    padding: 0.3rem 0.5rem;
 }
 
-.nav-right a:hover,
-.nav-right a.active {
+.nav-right a.active,
+.nav-right a:hover {
     background-color: var(--clay);
+    padding: 0.3rem 0.5rem;
     border-radius: 4px;
-    color: white;
 }
 
-/* -------------------------------------------------------------------
-    BUTTONS
-------------------------------------------------------------------- */
+/* GENERAL CONTENT */
+.content-section {
+    padding: 2rem 3rem;
+}
+
+.projects-title {
+    font-size: 2.4rem;
+    text-align: center;
+    color: var(--navy);
+}
+
+.projects-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+/* PROJECT GRID */
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+/* PROJECT CARD */
+.project-card {
+    background-color: white;
+    width: 320px;
+    padding: 1.8rem;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* HEAD ICONS */
+.project-logo-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-logo-small {
+    width: 45px;
+    height: auto;
+}
+
+/* CARD TEXT */
+.project-card h2 {
+    color: var(--navy);
+    margin-bottom: 0.8rem;
+}
+
+.project-card p {
+    color: #444;
+    line-height: 1.5;
+}
+
+.project-card ul {
+    padding-left: 1.2rem;
+}
+
+/* BUTTONS */
 .button {
     background-color: var(--clay);
     color: white !important;
-    padding: 0.8rem 1.5rem;
+    padding: 0.7rem 1.4rem;
     border-radius: 6px;
+    text-decoration: none;
     font-weight: bold;
     display: inline-block;
+    margin-top: 1rem;
 }
 
 .button:hover {
     background-color: var(--navy);
 }
 
-/* -------------------------------------------------------------------
-    PAGE SECTIONS
-------------------------------------------------------------------- */
-.content-section {
-    padding: 2rem 3rem;
-}
-
-/* -------------------------------------------------------------------
-    PROJECTS PAGE
-------------------------------------------------------------------- */
-
-.projects-title {
-    text-align: center;
-    color: var(--navy);
-    font-size: 2.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.projects-intro {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 2.5rem;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-/* --- 3 cards per row --- */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-/* PROJECT CARD */
-.project-card {
-    background-color: white;
-    padding: 1.8rem;
-    border-radius: 18px;
-    box-shadow: 0 6p
-
-/* --- PROJECT CARD IMAGES --- */
-
-.project-card img.project-logo {
-    width: 120px;         /* clean consistent size */
-    height: auto;
-    display: block;
-    margin: 0 auto 1rem;  /* centers it */
-}
-
-.project-card img.small-icon {
-    width: 28px;
-    height: auto;
-    margin-bottom: -4px;  /* aligns with title */
-    margin-right: 6px;
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
