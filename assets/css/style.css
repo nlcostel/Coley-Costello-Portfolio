@@ -22,6 +22,16 @@ body {
     padding: 2rem 2rem;
 }
 
+/* ---------- ABOUT PAGE IMAGE ---------- */
+.headshot {
+    display: block;
+    width: 260px;        /* Adjust as needed */
+    height: auto;
+    border-radius: 12px; /* Slight soft corners */
+    margin: 0 auto 2rem; /* Center image + spacing under it */
+    object-fit: cover;   /* keeps the crop clean */
+}
+
 /* ---------- NAVIGATION ---------- */
 .navbar {
     background-color: var(--navy);
