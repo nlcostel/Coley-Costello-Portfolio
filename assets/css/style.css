@@ -1,251 +1,83 @@
-/* ---------- COLOR PALETTE ---------- */
-:root {
-    --navy: #1F2C34;
-    --clay: #C07A55;
-    --sage: #AAB99F;
-    --stone: #E6E2DA;
-    --charcoal: #2E2F2F;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Coley Costello</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=8">
+</head>
 
-/* ---------- GLOBAL ---------- */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--stone);
-    color: var(--charcoal);
-}
+<body>
 
-/* Center ALL page content */
-.content-section {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem 2rem;
-}
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-left">Coley Costello</div>
+        <div class="nav-right">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills & Certifications</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </nav>
 
-/* ---------- ABOUT PAGE IMAGE ---------- */
-.headshot {
-    display: block;
-    width: 260px;        /* Adjust as needed */
-    height: auto;
-    border-radius: 12px; /* Slight soft corners */
-    margin: 0 auto 2rem; /* Center image + spacing under it */
-    object-fit: cover;   /* keeps the crop clean */
-}
+    <!-- CONTENT -->
+    <section class="content-section">
+        <h1 class="projects-title">Projects</h1>
+        <p class="projects-intro">
+            A curated collection of analytics, engineering, and process improvement work.
+            These projects demonstrate technical depth, problem-solving, and real-world application.
+        </p>
 
-/* ---------- ABOUT PAGE LAYOUT ---------- */
-.about-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+        <div class="projects-grid">
 
-/* Left column: headshot */
-.about-left {
-    flex: 0 0 260px; /* prevents headshot column from shrinking */
-}
+            <!-- CARD 1 -->
+            <div class="project-card">
+                <h2>End-to-End ETL Pipeline</h2>
+                <p>A fully automated data pipeline using Python, SQL, and Airflow. Demonstrates engineering, transformation logic, and workflow orchestration.</p>
+                <a class="button project-btn">Coming Soon</a>
+            </div>
 
-/* Right column: text */
-.about-right {
-    flex: 1;
-}
+            <!-- CARD 2 -->
+            <div class="project-card">
+                <h2>Customer Churn Prediction Model</h2>
+                <p>A machine learning classification model predicting churn risk using feature engineering, evaluation, and business insights.</p>
+                <a class="button project-btn">Coming Soon</a>
+            </div>
 
-/* Headshot styling */
-.headshot {
-    width: 260px;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    display: block;
-}
-/* ---------- NAVIGATION ---------- */
-.navbar {
-    background-color: var(--navy);
-    color: white;
-    padding: 1.2rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
+            <!-- CARD 3 -->
+            <div class="project-card">
+                <h2>Operations Efficiency Dashboard</h2>
+                <p>An interactive Power BI dashboard analyzing workflow efficiency and identifying bottlenecks to improve throughput.</p>
+                <a class="button project-btn">Coming Soon</a>
+            </div>
 
-/* Desktop menu */
-.nav-right {
-    display: flex;
-}
+            <!-- CARD 4 -->
+            <div class="project-card start-second-row">
+                <img src="assets/img/controller.png" class="controller-icon">
 
-.nav-right a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 1.5rem;
-}
+                <h2>Text-Based Adventure Game</h2>
 
-/* Highlight active page */
-.nav-right a.active {
-    border-bottom: 2px solid var(--clay);
-}
+                <p>An interactive Python story engine demonstrating branching logic, user input handling, and modular design.</p>
 
-/* ---------- HAMBURGER MENU ---------- */
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    user-select: none;
-}
+                <ul>
+                    <li>Python scripting</li>
+                    <li>Branching logic</li>
+                    <li>User input handling</li>
+                    <li>Documentation</li>
+                    <li>Workflow mapping</li>
+                </ul>
 
-/* ---------- PAGE HEADERS ---------- */
-.projects-title,
-.about-title,
-.skills-title,
-.resume-title,
-.home-title {
-    text-align: center;
-    font-size: 2.3rem;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-}
+                <a class="button" href="https://github.com/nlcostel/Text-Based-Adventure-Game" target="_blank">View on GitHub</a>
+                <a class="button" href="https://raw.githubusercontent.com/nlcostel/Text-Based-Adventure-Game/main/Game/Text-Based-Game.py" target="_blank">Play (GitHub Viewer)</a>
+            </div>
 
-.projects-intro,
-.page-intro {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 2.5rem;
-    font-size: 1.1rem;
-}
+        </div>
+    </section>
 
-/* ---------- PROJECT GRID ---------- */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    justify-items: center;
-}
+    <footer>
+        <p>© 2025 Coley Costello</p>
+    </footer>
 
-/* Ensure Text-Based Game card starts on row 2 */
-.start-second-row {
-    grid-column: 1 / span 1;
-}
-
-/* ---------- PROJECT CARDS ---------- */
-.project-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 18px;
-    width: 100%;
-    max-width: 380px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.project-card h2 {
-    color: var(--navy);
-    margin-bottom: 1rem;
-}
-
-.project-card ul {
-    padding-left: 1.2rem;
-}
-
-/* ---------- BUTTONS ---------- */
-.button {
-    background-color: var(--clay);
-    color: white !important;
-    padding: 0.8rem 1.3rem;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-
-    display: block;
-    width: fit-content;
-    margin: 1.5rem auto;
-
-    text-align: center;
-}
-
-.button:hover {
-    background-color: var(--navy);
-}
-
-/* ---------- PROJECT ICONS ---------- */
-.project-icons {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.controller-icon {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 1rem;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 900px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .start-second-row {
-        grid-column: auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 800px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-left, .about-right {
-        flex: unset;
-    }
-
-    .about-right {
-        text-align: left;
-    }
-}
-
-/* ---------- MOBILE NAVIGATION ---------- */
-@media (max-width: 800px) {
-    .hamburger {
-        display: block;
-    }
-
-    /* Hide menu on mobile until toggled */
-    .nav-right {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: var(--navy);
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem 0;
-        display: none;
-    }
-
-    .nav-right a {
-        margin: 1rem 0;
-        font-size: 1.3rem;
-        display: block;
-    }
-
-    /* When menu-open class is applied to body */
-    body.menu-open .nav-right {
-        display: flex;
-    }
-}
+</body>
+</html>
