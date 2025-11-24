@@ -32,6 +32,34 @@ body {
     object-fit: cover;   /* keeps the crop clean */
 }
 
+/* ---------- ABOUT PAGE LAYOUT ---------- */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Left column: headshot */
+.about-left {
+    flex: 0 0 260px; /* prevents headshot column from shrinking */
+}
+
+/* Right column: text */
+.about-right {
+    flex: 1;
+}
+
+/* Headshot styling */
+.headshot {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
 /* ---------- NAVIGATION ---------- */
 .navbar {
     background-color: var(--navy);
@@ -158,5 +186,20 @@ body {
 @media (max-width: 600px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left, .about-right {
+        flex: unset;
+    }
+
+    .about-right {
+        text-align: left;
     }
 }
