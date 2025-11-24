@@ -1,49 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coley Costello | Data Analyst, Engineer, Project Manager</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=7">
-</head>
+/* ---------- COLOR PALETTE ---------- */
+:root {
+    --navy: #1F2C34;
+    --clay: #C07A55;
+    --sage: #AAB99F;
+    --stone: #E6E2DA;
+    --charcoal: #2E2F2F;
+}
 
-<body>
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--stone);
+    color: var(--charcoal);
+}
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-    <div class="nav-left">Coley Costello</div>
+/* Center ALL page content */
+.content-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
 
-    <!-- Mobile menu toggle -->
-    <div class="hamburger" onclick="document.body.classList.toggle('menu-open')">
-        ☰
-    </div>
+/* ---------- NAVIGATION (NO HAMBURGER MENU) ---------- */
+.navbar {
+    background-color: var(--navy);
+    color: white;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <div class="nav-right">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills & Certifications</a>
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-    </div>
-</nav>
+.nav-right {
+    display: flex;
+    flex-wrap: wrap;          /* allows wrapping on mobile */
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
 
-    <!-- MAIN CONTENT (CENTERED) -->
-    <section class="content-section">
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-        <h1 class="home-title">Data Analyst. Engineer. Project Manager.</h1>
+.nav-right a.active {
+    border-bottom: 2px solid var(--clay);
+}
 
-        <p class="page-intro">
-            Blending technical depth with strategic problem-solving to drive 
-            data-informed decisions and operational excellence.
-        </p>
+/* MOBILE NAV — simply stack links, no hamburger */
+@media (max-width: 600px) {
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+}
 
-        <a class="button" href="projects.html">View My Work</a>
+/* ---------- PAGE HEADERS ---------- */
+.projects-title,
+.about-title,
+.skills-title,
+.resume-title,
+.home-title {
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+}
 
-    </section>
+.projects-intro,
+.page-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+}
 
-    <footer>
-        <p>© 2025 Coley Costello</p>
-    </footer>
+/* ---------- ABOUT PAGE ---------- */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-</body>
-</html>
+.about-left {
+    flex: 0 0 260px;
+}
+
+.about-right {
+    flex: 1;
+}
+
+.headshot {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mobile layout for About page */
+@media (max-width: 800px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-right {
+        text-align: left;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+}
+
+/* ---------- PROJECT GRID ---------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2.5rem;
+    justify-items: center;
+    width: 100%;
+}
+
+/* Ensures 4th card starts on row 2 under column 1 */
+.start-second-row {
+    grid-column: 1 / span 1;
+}
+
+/* ---------- PROJECT CARDS ---------- */
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.project-card h2 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.project-card ul {
+    padding-left: 1.2rem;
+}
+
+/* ---------- BUTTONS ---------- */
+.button {
+    background-color: var(--clay);
+    color: white !important;
+    padding: 0.8rem 1.3rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-we
