@@ -68,6 +68,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+/* Desktop menu */
+.nav-right {
+    display: flex;
 }
 
 .nav-right a {
@@ -77,8 +83,17 @@ body {
     margin-left: 1.5rem;
 }
 
+/* Highlight active page */
 .nav-right a.active {
     border-bottom: 2px solid var(--clay);
+}
+
+/* ---------- HAMBURGER MENU ---------- */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
 }
 
 /* ---------- PAGE HEADERS ---------- */
@@ -201,5 +216,36 @@ body {
 
     .about-right {
         text-align: left;
+    }
+}
+
+/* ---------- MOBILE NAVIGATION ---------- */
+@media (max-width: 800px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide menu on mobile until toggled */
+    .nav-right {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--navy);
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    .nav-right a {
+        margin: 1rem 0;
+        font-size: 1.3rem;
+        display: block;
+    }
+
+    /* When menu-open class is applied to body */
+    body.menu-open .nav-right {
+        display: flex;
     }
 }
