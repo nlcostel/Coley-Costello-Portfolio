@@ -110,10 +110,9 @@ body {
     border-radius: 6px;
     font-weight: bold;
 
-    display: block;       /* NEW - makes button centerable */
-    width: fit-content;   /* NEW - keeps button from stretching */
-    margin: 1.5rem auto;  /* NEW - centers horizontally */
-
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto;
     text-align: center;
 }
 
