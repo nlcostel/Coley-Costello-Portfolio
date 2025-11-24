@@ -4,80 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Coley Costello</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=8">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-        <div class="nav-left">Coley Costello</div>
-        <div class="nav-right">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills & Certifications</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="resume.html">Resume</a>
+<header>
+<nav class="navbar">
+    <div class="nav-left">Coley Costello</div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills & Certifications</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+    </div>
+</nav>
+</header>
+
+<section class="content-section">
+    <h1>Projects</h1>
+
+    <p class="projects-intro">
+        A curated collection of analytics, engineering, and process improvement work.
+        More projects coming soon.
+    </p>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <h2>End-to-End ETL Pipeline</h2>
+            <p>A fully automated data pipeline using Python, SQL, and Airflow.</p>
+            <a class="button">Coming Soon</a>
         </div>
-    </nav>
 
-    <!-- CONTENT -->
-    <section class="content-section">
-        <h1 class="projects-title">Projects</h1>
-        <p class="projects-intro">
-            A curated collection of analytics, engineering, and process improvement work.
-            These projects demonstrate technical depth, problem-solving, and real-world application.
-        </p>
-
-        <div class="projects-grid">
-
-            <!-- CARD 1 -->
-            <div class="project-card">
-                <h2>End-to-End ETL Pipeline</h2>
-                <p>A fully automated data pipeline using Python, SQL, and Airflow. Demonstrates engineering, transformation logic, and workflow orchestration.</p>
-                <a class="button project-btn">Coming Soon</a>
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="project-card">
-                <h2>Customer Churn Prediction Model</h2>
-                <p>A machine learning classification model predicting churn risk using feature engineering, evaluation, and business insights.</p>
-                <a class="button project-btn">Coming Soon</a>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="project-card">
-                <h2>Operations Efficiency Dashboard</h2>
-                <p>An interactive Power BI dashboard analyzing workflow efficiency and identifying bottlenecks to improve throughput.</p>
-                <a class="button project-btn">Coming Soon</a>
-            </div>
-
-            <!-- CARD 4 -->
-            <div class="project-card start-second-row">
-                <img src="assets/img/controller.png" class="controller-icon">
-
-                <h2>Text-Based Adventure Game</h2>
-
-                <p>An interactive Python story engine demonstrating branching logic, user input handling, and modular design.</p>
-
-                <ul>
-                    <li>Python scripting</li>
-                    <li>Branching logic</li>
-                    <li>User input handling</li>
-                    <li>Documentation</li>
-                    <li>Workflow mapping</li>
-                </ul>
-
-                <a class="button" href="https://github.com/nlcostel/Text-Based-Adventure-Game" target="_blank">View on GitHub</a>
-                <a class="button" href="https://raw.githubusercontent.com/nlcostel/Text-Based-Adventure-Game/main/Game/Text-Based-Game.py" target="_blank">Play (GitHub Viewer)</a>
-            </div>
-
+        <div class="project-card">
+            <h2>Customer Churn Prediction Model</h2>
+            <p>A machine learning model predicting customer churn risk.</p>
+            <a class="button">Coming Soon</a>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2025 Coley Costello</p>
-    </footer>
+        <div class="project-card">
+            <h2>Operations Efficiency Dashboard</h2>
+            <p>An interactive Power BI dashboard analyzing workflow efficiency.</p>
+            <a class="button">Coming Soon</a>
+        </div>
+
+        <!-- Text-Based Game (Row 2) -->
+        <div class="project-card">
+            <img src="assets/img/controller.png" class="controller-icon">
+            <h2>Text-Based Adventure Game</h2>
+            <p>An interactive Python-based story engine demonstrating logic, input handling, and modular design.</p>
+
+            <ul>
+                <li>Python Scripting</li>
+                <li>Decision Tree Logic</li>
+                <li>User Input Handling</li>
+                <li>Workflow Mapping</li>
+            </ul>
+
+            <a class="button" href="https://github.com/nlcostel/Text-Based-Adventure-Game" target="_blank">View on GitHub</a>
+            <a class="button" href="https://raw.githubusercontent.com/nlcostel/Text-Based-Adventure-Game/main/Game/Text-Based-Game.py" target="_blank">Play (GitHub Viewer)</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p style="text-align:center;">© 2025 Coley Costello</p>
+</footer>
 
 </body>
 </html>
