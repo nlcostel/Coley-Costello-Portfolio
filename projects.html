@@ -1,103 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Coley Costello</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=7">
+    <link rel="stylesheet" href="assets/css/style.css?v=8">
 </head>
 
 <body>
 
-   <nav class="navbar">
-    <div class="nav-left">Coley Costello</div>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-left">Coley Costello</div>
+        <div class="nav-right">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills & Certifications</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </nav>
 
-    <!-- Mobile menu toggle -->
-    <div class="hamburger" onclick="document.body.classList.toggle('menu-open')">
-        ☰
-    </div>
-
-    <div class="nav-right">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills & Certifications</a>
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-    </div>
-</nav>
-
+    <!-- CONTENT -->
     <section class="content-section">
         <h1 class="projects-title">Projects</h1>
         <p class="projects-intro">
             A curated collection of analytics, engineering, and process improvement work.
             These projects demonstrate technical depth, problem-solving, and real-world application.
-            More projects coming soon.
         </p>
 
         <div class="projects-grid">
 
-            <!-- PROJECT CARD 1 -->
+            <!-- CARD 1 -->
             <div class="project-card">
                 <h2>End-to-End ETL Pipeline</h2>
-                <p>
-                    A fully automated data pipeline using Python, SQL, and Airflow.
-                    Demonstrates engineering, transformation logic, and workflow orchestration.
-                </p>
-                <a class="button project-btn" href="#">Coming Soon</a>
+                <p>A fully automated data pipeline using Python, SQL, and Airflow. Demonstrates engineering, transformation logic, and workflow orchestration.</p>
+                <a class="button project-btn">Coming Soon</a>
             </div>
 
-            <!-- PROJECT CARD 2 -->
+            <!-- CARD 2 -->
             <div class="project-card">
                 <h2>Customer Churn Prediction Model</h2>
-                <p>
-                    A machine learning classification model predicting churn risk using feature
-                    engineering, model evaluation, and business insight synthesis.
-                </p>
-                <a class="button project-btn" href="#">Coming Soon</a>
+                <p>A machine learning classification model predicting churn risk using feature engineering, evaluation, and business insights.</p>
+                <a class="button project-btn">Coming Soon</a>
             </div>
 
-            <!-- PROJECT CARD 3 -->
+            <!-- CARD 3 -->
             <div class="project-card">
                 <h2>Operations Efficiency Dashboard</h2>
-                <p>
-                    An interactive Power BI dashboard analyzing workflow efficiency and identifying
-                    bottlenecks to improve throughput and reduce delays.
-                </p>
-                <a class="button project-btn" href="#">Coming Soon</a>
+                <p>An interactive Power BI dashboard analyzing workflow efficiency and identifying bottlenecks to improve throughput.</p>
+                <a class="button project-btn">Coming Soon</a>
             </div>
 
-            <!-- PROJECT CARD 4 (Second Row) -->
-            <div class="project-card">
-                <div class="icon-wrapper">
-                    <img src="assets/img/controller.png" alt="Controller Icon" class="controller-icon">
-                </div>
+            <!-- CARD 4 -->
+            <div class="project-card start-second-row">
+                <img src="assets/img/controller.png" class="controller-icon">
 
                 <h2>Text-Based Adventure Game</h2>
 
-                <p>
-                    An interactive Python-based story engine demonstrating branching logic,
-                    user input handling, and modular software design.
-                </p>
+                <p>An interactive Python story engine demonstrating branching logic, user input handling, and modular design.</p>
 
                 <ul>
-                    <li>Python Scripting</li>
-                    <li>Decision Tree Logic</li>
-                    <li>User Input Handling</li>
-                    <li>Software Documentation</li>
-                    <li>Workflow Mapping</li>
+                    <li>Python scripting</li>
+                    <li>Branching logic</li>
+                    <li>User input handling</li>
+                    <li>Documentation</li>
+                    <li>Workflow mapping</li>
                 </ul>
 
-                <div class="project-buttons">
-                    <a href="https://github.com/nlcostel/Text-Based-Adventure-Game"
-                       target="_blank" class="button">View on GitHub</a>
-
-                    <a href="https://raw.githubusercontent.com/nlcostel/Text-Based-Adventure-Game/main/Game/Text-Based-Game.py"
-                       target="_blank" class="button">Play (GitHub Viewer)</a>
-                </div>
+                <a class="button" href="https://github.com/nlcostel/Text-Based-Adventure-Game" target="_blank">View on GitHub</a>
+                <a class="button" href="https://raw.githubusercontent.com/nlcostel/Text-Based-Adventure-Game/main/Game/Text-Based-Game.py" target="_blank">Play (GitHub Viewer)</a>
             </div>
 
         </div>
     </section>
+
+    <footer>
+        <p>© 2025 Coley Costello</p>
+    </footer>
 
 </body>
 </html>
