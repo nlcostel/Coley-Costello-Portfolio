@@ -101,7 +101,7 @@ body {
     padding-left: 1.2rem;
 }
 
-/* ---------- BUTTONS ---------- */
+* ---------- BUTTONS ---------- */
 .button {
     background-color: var(--clay);
     color: white !important;
@@ -109,8 +109,12 @@ body {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 1rem;
+
+    display: block;       /* NEW - makes button centerable */
+    width: fit-content;   /* NEW - keeps button from stretching */
+    margin: 1.5rem auto;  /* NEW - centers horizontally */
+
+    text-align: center;
 }
 
 .button:hover {
