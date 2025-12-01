@@ -180,7 +180,12 @@ h1 {
 }
 
 /* ---------- NEW: Project card button spacing fix ---------- */
-/* This ensures "View Project" buttons behave consistently */
 .project-card .button {
     margin-top: 1.5rem;
+}
+
+/* ---------- NEW: Fix for unclickable buttons (z-index fix) ---------- */
+.project-card a.button {
+    position: relative;
+    z-index: 5;
 }
