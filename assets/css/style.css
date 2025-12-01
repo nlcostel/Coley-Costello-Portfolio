@@ -31,7 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;     /* Allows mobile stacking */
+    flex-wrap: wrap;
 }
 
 .nav-left {
@@ -101,7 +101,6 @@ h1 {
     flex: 1;
 }
 
-/* About page image */
 .headshot {
     width: 260px;
     height: auto;
@@ -110,7 +109,6 @@ h1 {
     object-fit: cover;
 }
 
-/* Mobile About Layout */
 @media (max-width: 800px) {
     .about-container {
         flex-direction: column;
@@ -179,4 +177,10 @@ h1 {
     height: 60px;
     display: block;
     margin: 0 auto 1rem;
+}
+
+/* ---------- NEW: Project card button spacing fix ---------- */
+/* This ensures "View Project" buttons behave consistently */
+.project-card .button {
+    margin-top: 1.5rem;
 }
