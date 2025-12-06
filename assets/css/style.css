@@ -225,7 +225,7 @@ h1 {
 /* ---------- SKILLS GRID LAYOUT ---------- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     margin-top: 2rem;
 }
@@ -238,9 +238,8 @@ h1 {
 
 .skills-column h3 {
     font-weight: bold;
-    margin-top: 1.2rem;
-    margin-bottom: 0.4rem;
-    color: var(--charcoal);
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 .skills-column ul {
@@ -248,3 +247,16 @@ h1 {
     line-height: 1.6rem;
 }
 
+/* Responsive: Switch to 2 columns on tablets */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: Switch to 1 column on mobile */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
