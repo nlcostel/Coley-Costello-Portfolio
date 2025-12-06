@@ -221,3 +221,30 @@ h1 {
     margin-bottom: 0.5rem;
     line-height: 1.4;
 }
+
+/* ---------- SKILLS GRID LAYOUT ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.skills-column h2 {
+    text-align: center;
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.skills-column h3 {
+    font-weight: bold;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: var(--charcoal);
+}
+
+.skills-column ul {
+    padding-left: 1.2rem;
+    line-height: 1.6rem;
+}
+
