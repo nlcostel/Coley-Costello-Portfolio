@@ -189,3 +189,34 @@ h1 {
     position: relative;
     z-index: 5;
 }
+
+/* =========================================================
+   NEW SECTION: Skills & Certifications Page Layout
+   ========================================================= */
+
+.skills-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.skills-column {
+    max-width: 350px;
+}
+
+.skills-column h2 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.skills-column ul {
+    padding-left: 1.2rem;
+}
+
+.skills-column li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
